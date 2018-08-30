@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Html5 Template</title>
+<title>The Howrowood</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 <!-- Favicone Icon -->
@@ -22,8 +22,36 @@
 <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 <!--Theme Color-->
 <link href="assets/css/theme-color/default.css" rel="stylesheet" id="theme-color" type="text/css">
+<style>
+.serviceLinks {
+  cursor: pointer !important;
+}
+</style>
+  <script>
+    function hideAllServices() {
+      for(let i = 1; i <= 6; i++) {
+        console.log('hiding: ', i);
+        document.getElementById('service' + i).classList.add('hidden');
+        document.getElementById('service' + i + 'Link').classList.remove('active');
+      }
+    }
+    function showService(id) {
+      hideAllServices();
+      document.getElementById('service' + id).classList.remove('hidden');
+      document.getElementById('service' + id + 'Link').classList.add('active');
+      window.history.pushState(null, '', '?id=' + id);
+    }
+    function getQueryStringValue(key) {  
+      return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+    }
+    function init(){
+      console.log('onload');
+      const id = getQueryStringValue('id');
+      showService(id);
+    }
+  </script>
 </head>
-<body>
+<body onload="init()">
 <!--loader-->
 <div id="preloader">
   <div class="sk-circle">
@@ -160,16 +188,17 @@
             <div class="special-links">
               <ul>
                 <li> <a href="services.html">all services</a> </li>
-                <li> <a href="#" class="active">recycling</a> </li>
-                <li> <a href="#">packaging</a> </li>
-                <li> <a href="#">commercial movers</a> </li>
-                <li> <a href="#">furniture rebinding</a> </li>
-                <li> <a href="#">residential movers</a> </li>
-                <li> <a href="#">storage</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(1)" id="service1Link">Logging</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(2)" id="service2Link">Timber Purchasing</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(3)" id="service3Link">Timber supplies</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(4)" id="service4Link">Harvesting</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(5)" id="service5Link">Truck & Rail Shipping</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(6)" id="service6Link">Manufacturing</a> </li>
               </ul>
             </div>
           </div>
-          <div class="single-sidebar-widget">
+          <!--Side bar hidden -->
+          <div class="single-sidebar-widget hidden">
             <div class="sec-title">
               <h2>Download<span> brochure</span></h2>
               <span>Here is some useful documents</span> </div>
@@ -179,13 +208,14 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-8 col-sm-7">
+        <!-- Each service -->
+        <div class="col-md-8 col-sm-7" id="service1">
           <div class="full-pic">
-            <figure> <img src="assets/images/services/1-1.jpg" alt=""> </figure>
+            <figure> <img src="assets/images/services/logging.jpg" alt=""> </figure>
           </div>
           <div class="text-box mt-xs-30 mt-40">
             <div class="box-title mb-20">
-              <h2>recycling</h2>
+              <h2>Logging</h2>
             </div>
             <div class="text-content mb-20">
               <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
@@ -195,82 +225,95 @@
                 Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
                 Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
             </div>
-            <div class="col-md-6">
-              <ul class="our-point">
-                <li> <i class="ion-android-done"></i> Aenean suscipit eget mi act fermentum. </li>
-                <li> <i class="ion-android-done"></i> Aenean suscipit eget mi act fermentum. </li>
-                <li> <i class="ion-android-done"></i> Aenean suscipit eget mi act fermentum. </li>
-              </ul>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service2">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/timberPurchasing.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Timber Purchasing</h2>
             </div>
-            <div class="col-md-6">
-              <ul class="our-point  mb-30">
-                <li> <i class="ion-android-done"></i> Aenean suscipit eget mi act fermentum. </li>
-                <li> <i class="ion-android-done"></i> Aenean suscipit eget mi act fermentum. </li>
-                <li> <i class="ion-android-done"></i> Aenean suscipit eget mi act fermentum. </li>
-              </ul>
+            <div class="text-content mb-20">
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
             </div>
-            <div class="row">
-              <div class="col-md-6 mb-xs-30 mb-sm-30">
-                <figure> <img src="assets/images/project/1-1.png" alt=""> </figure>
-              </div>
-              <div class="col-md-6">
-                <figure> <img src="assets/images/project/3-1.png" alt=""> </figure>
-              </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service3">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/timberSupplies.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Timber Supplies</h2>
             </div>
-            <div class="row mt-45 clearfix">
-              <div class="col-md-5"> <img class="img-responsive" src="assets/images/project/project2.jpg" alt="Photo"> </div>
-              <div class="col-md-7 text-box">
-                <div class="box-title mb-20 mt-sm-30 mt-xs-30">
-                  <h3>Aenean suscipit eget mi act</h3>
-                </div>
-                <div class="text-content">
-                  <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
-                    Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
-                    Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
-                </div>
-              </div>
+            <div class="text-content mb-20">
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
             </div>
-            <div class="row">
-              <div class="col-sm-12 service-box mb-30 mt-30">
-                <h3>Reporting and Cost Control</h3>
-                <div class="text-content mb-30">
-                  <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
-                    Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
-                    Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
-                </div>
-                <div class="panel-group service-faq faq" id="accordion">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true"> Duis aute irure dolor in reprehenderit <i class="fa fa-plus collape-plus"></i></a></h4>
-                    </div>
-                    <div id="collapse-1" class="panel-collapse collapse in">
-                      <div class="panel-body">
-                        <p> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem, Maecenas tempus, tellus eget condimentum rhoncus. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false"> Duis aute irure dolor in reprehenderit <i class="fa fa-plus collape-plus"></i></a></h4>
-                    </div>
-                    <div id="collapse-2" class="panel-collapse collapse">
-                      <div class="panel-body">
-                        <p> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem, Maecenas tempus, tellus eget condimentum rhoncus. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false"> Duis aute irure dolor in reprehenderit <i class="fa fa-plus collape-plus"></i></a></h4>
-                    </div>
-                    <div id="collapse-3" class="panel-collapse collapse">
-                      <div class="panel-body">
-                        <p> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem, Maecenas tempus, tellus eget condimentum rhoncus. </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service4">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/harvesting.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Harvesting</h2>
+            </div>
+            <div class="text-content mb-20">
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service5">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/truckRailShipping.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Truck & Rail Shipping</h2>
+            </div>
+            <div class="text-content mb-20">
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service6">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/manufacturing.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Manufacturing</h2>
+            </div>
+            <div class="text-content mb-20">
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
+              <p> Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget..
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget
+                Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget.. </p>
             </div>
           </div>
         </div>
