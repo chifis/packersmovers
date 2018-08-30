@@ -323,7 +323,7 @@ $(window).load(function(){
 	
 
 	});
-	var myCenter = new google.maps.LatLng(51.528308, -0.3817765);
+	var myCenter = new google.maps.LatLng(36.7783, -119.4179);
 	function initialize() {
            var mapProp = {
             center:myCenter,
