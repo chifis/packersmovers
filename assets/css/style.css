@@ -3755,7 +3755,7 @@ label {
 	background: #fff;
 	text-align: center;
 }
-.contact-form input[type="text"], .contact-form textarea {
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
 	padding-right: 30px;
 	border: 1px solid #DEDEDE;
 	margin-bottom: 0;
@@ -3767,7 +3767,7 @@ form .error {
 .contact-form textarea {
 	height: 202px;
 }
-.contact-form input[type="text"] {
+.contact-form input[type="text"], .contact-form input[type="email"] {
 	display: block;
 	height: 46px;
 	margin-bottom: 32px;
@@ -3780,7 +3780,7 @@ form .error {
 	-webkit-appearance: none;
 	border-radius: 0;
 }
-.contact-form input[type="text"]:focus, .contact-form textarea:focus {
+.contact-form input[type="text"]:focus, .contact-form input[type="email"]:focus, .contact-form textarea:focus {
 	border: 1px solid #22b5e2;
 }
 .i-block {
