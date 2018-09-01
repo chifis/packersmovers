@@ -4657,6 +4657,9 @@ background-size:cover
 	-moz-transition: all 0.2s ease-in-out 0s;
 	-webkit-transition: all 0.2s ease-in-out 0s;
 	-o-transition: all 0.2s ease-in-out 0s;
+
+	width: 200px;
+	height: 200px;
 }
 .gallery-item-img:hover img {
 	transform: scale(1.2);
