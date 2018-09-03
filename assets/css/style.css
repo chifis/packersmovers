@@ -4741,3 +4741,7 @@ background-size:cover
 .no-border-radius {
 	border-radius: 0px !important;
 }
+
+.text-bold {
+	font-weight: bold;
+}

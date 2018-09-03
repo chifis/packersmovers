@@ -29,7 +29,7 @@
 </style>
   <script>
     function hideAllServices() {
-      for(let i = 1; i <= 6; i++) {
+      for(let i = 1; i <= 8; i++) {
         console.log('hiding: ', i);
         document.getElementById('service' + i).classList.add('hidden');
         document.getElementById('service' + i + 'Link').classList.remove('active');
@@ -108,7 +108,7 @@
                 <li> <a href="about.html">About us</a> </li>
                 <li> <a href="services.html">services</a></li>
                 <li> <a href="gallery.html">Gallery</a></li>
-                <li> <a href="shop.html">Shop</a> </li>
+                
                 <li> <a href="contact.html">contact us</a> </li>
               </ul>
               </nav>
@@ -143,18 +143,10 @@
                 <li> <a class="serviceLinks" onclick="showService(4)" id="service4Link">Harvesting</a> </li>
                 <li> <a class="serviceLinks" onclick="showService(5)" id="service5Link">Truck & Rail Shipping</a> </li>
                 <li> <a class="serviceLinks" onclick="showService(6)" id="service6Link">Manufacturing</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(7)" id="service7Link">Shipping</a> </li>
+                <li> <a class="serviceLinks" onclick="showService(8)" id="service8Link">Methods of Shipment</a> </li>
               </ul>
             </div>
-          </div>
-          <!--Side bar hidden -->
-          <div class="single-sidebar-widget hidden">
-            <div class="sec-title">
-              <h2>Download<span> brochure</span></h2>
-              <span>Here is some useful documents</span> </div>
-            <ul class="brochure-btns">
-              <li> <a href="#" class="clearfix"><i class="fa fa-file-pdf-o"></i> <span>Download Brochure</span> </a> </li>
-              <li> <a href="#" class="clearfix"><i class="fa fa-file-pdf-o"></i> <span>Download Brochure</span></a> </li>
-            </ul>
           </div>
         </div>
         <!-- Each service -->
@@ -233,6 +225,32 @@
             </div>
             <div class="text-content mb-20">
               <p>Specialized in precision screw machine & turned products and components for a wide variety of industries and applications. We offer short to medium production runs of simple to very complex, small diameter products in both metal and plastic. All products are manufactured in our plant which allows us to maintain high quality, control costs, and meet delivery requirements.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service7">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/shipping.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Shipping</h2>
+            </div>
+            <div class="text-content mb-20">
+              <p>Howrowood can handle all of the necessary logistics from the manufacturer to the country of final destination. We handle all of the inland transportation, cargo handling & inspections at the port of export, ocean transportation, and documentation that is necessary for delivering our products to our client's preferred port of destination. In most cases one truckload of material will not maximize the full capacity of export equipment, such as 40' containers or flat racks. Our operations are positioned close to the port of export to ensure the equipment space and capacity is maximized to reduce the cost per unit of measure when shipping over the ocean. In addition to our port operations, our large shipping volumes ensure that our clients receive the most competitive CIF pricing for the products we distribute.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-7" id="service8">
+          <div class="full-pic">
+            <figure> <img src="assets/images/services/methodsOfShipment.jpg" alt=""> </figure>
+          </div>
+          <div class="text-box mt-xs-30 mt-40">
+            <div class="box-title mb-20">
+              <h2>Methods of Shipping</h2>
+            </div>
+            <div class="text-content mb-20">
+              <p>Howrowood  has warehouses strategically located near ports of export throughout the US East Coast and Gulf Coast. We work hard to reduce costs & increase efficiencies in all aspects of handling our client's export orders. We analyze the costs associated in the entire supply chain from the point of cargo origination through the port of final destination. We keep many of the items our markets demand in stock ready to ship at a moment's notice, allowing Putnam Lumber the opportunity to deliver cargos to the port with tight cargo deadline cuts. In addition to our warehousing facilities, we also offer mill direct shipments which can help reduce transportation and handling costs, resulting in lower CIF pricing for our clients. Our interest is in getting the right quality products for our clients at the best possible CIF price.</p>
             </div>
           </div>
         </div>
