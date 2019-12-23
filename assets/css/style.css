@@ -4745,3 +4745,10 @@ background-size:cover
 .text-bold {
 	font-weight: bold;
 }
+
+.about-us-video {
+	margin-left: 16vw;
+}
+.about-us-video video {
+	width: 50vw;
+}
