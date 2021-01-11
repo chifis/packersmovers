@@ -1,351 +1,663 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>The Howrowood</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-<!-- Favicone Icon -->
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<!-- CSS -->
-<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7COswald:300,400,700%7Clato:400,100,200,300,500">
-<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
-<link href="assets/css/ionicons.css" rel="stylesheet" type="text/css">
-<!-- carousel -->
-<link href="assets/css/plugin/owl.carousel.css" rel="stylesheet" type="text/css">
-<link href="assets/css/plugin/owl.transitions.css" rel="stylesheet" type="text/css">
-<!--Main Slider-->
-<link href="assets/css/settings.css" type="text/css" rel="stylesheet" media="screen">
-<link href="assets/css/layers.css" type="text/css" rel="stylesheet" media="screen">
-<!--Main Style-->
-<link href="assets/css/style.css" rel="stylesheet" type="text/css">
-<!--Theme Color-->
-<link href="assets/css/theme-color/default.css" rel="stylesheet" id="theme-color" type="text/css">
-<style>
-.serviceLinks {
-  cursor: pointer !important;
-}
-</style>
-  <script>
-    function hideAllServices() {
-      for(let i = 1; i <= 8; i++) {
-        console.log('hiding: ', i);
-        document.getElementById('service' + i).classList.add('hidden');
-        document.getElementById('service' + i + 'Link').classList.remove('active');
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>The Howrowood</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <!--[if IE
+      ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    /><![endif]-->
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- CSS -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7COswald:300,400,700%7Clato:400,100,200,300,500"
+    />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/ionicons.css" rel="stylesheet" type="text/css" />
+    <!-- carousel -->
+    <link
+      href="assets/css/plugin/owl.carousel.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/plugin/owl.transitions.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--Main Slider-->
+    <link
+      href="assets/css/settings.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link
+      href="assets/css/layers.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <!--Main Style-->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!--Theme Color-->
+    <link
+      href="assets/css/theme-color/default.css"
+      rel="stylesheet"
+      id="theme-color"
+      type="text/css"
+    />
+    <style>
+      .serviceLinks {
+        cursor: pointer !important;
       }
-    }
-    function showService(id) {
-      hideAllServices();
-      document.getElementById('service' + id).classList.remove('hidden');
-      document.getElementById('service' + id + 'Link').classList.add('active');
-      window.history.pushState(null, '', '?id=' + id);
-    }
-    function getQueryStringValue(key) {  
-      return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
-    }
-    function init(){
-      console.log('onload');
-      const id = getQueryStringValue('id');
-      showService(id);
-    }
-  </script>
-</head>
-<body onload="init()">
-<!--loader-->
-<div id="preloader">
-  <div class="sk-circle">
-    <div class="sk-circle1 sk-child"></div>
-    <div class="sk-circle2 sk-child"></div>
-    <div class="sk-circle3 sk-child"></div>
-    <div class="sk-circle4 sk-child"></div>
-    <div class="sk-circle5 sk-child"></div>
-    <div class="sk-circle6 sk-child"></div>
-    <div class="sk-circle7 sk-child"></div>
-    <div class="sk-circle8 sk-child"></div>
-    <div class="sk-circle9 sk-child"></div>
-    <div class="sk-circle10 sk-child"></div>
-    <div class="sk-circle11 sk-child"></div>
-    <div class="sk-circle12 sk-child"></div>
-  </div>
-</div>
-<!--loader--> 
-<!-- Site Wraper -->
-<div class="wrapper"> 
-  <!-- HEADER -->
-  <header id="header" class="header header-2">
-    <div class="container secondary-header">
-      <div class="row">
-        <div class="col-sm-3 col-md-4">
-          <div class="logo"> <a href="index.html"><img src="assets/images/logo.png" alt="Mega business"></a> </div>
-          <button id="menu" class="menu visible-xs"></button>
-        </div>
-        <div class="col-sm-9 col-md-8 hidden-xs">
-          <div class="call-us">
-            <ul>
-              <li class="top-space">
-                <div class="icon-fa"> <i class="fa fa-clock-o"></i> </div>
-                <div class="position">
-                  <div class="time_block"> Office Timing </div>
-                  <div class="date-block"> MON - FRI 8 AM - 5 PM (MST) </div>
-                </div>
-              </li>
-              <li class="phone-nomber">
-                <div class="text-right"> <i class="fa fa-phone"></i><span class="call-box"> Phone</span> </div>
-                <a href="tel:+1-844-469-7696">+1-844-469-7696</a> </li>
-            </ul>
-          </div>
-        </div>
+    </style>
+    <script>
+      function hideAllServices() {
+        for (let i = 1; i <= 8; i++) {
+          console.log("hiding: ", i);
+          document.getElementById("service" + i).classList.add("hidden");
+          document
+            .getElementById("service" + i + "Link")
+            .classList.remove("active");
+        }
+      }
+      function showService(id) {
+        hideAllServices();
+        document.getElementById("service" + id).classList.remove("hidden");
+        document
+          .getElementById("service" + id + "Link")
+          .classList.add("active");
+        window.history.pushState(null, "", "?id=" + id);
+      }
+      function getQueryStringValue(key) {
+        return decodeURIComponent(
+          window.location.search.replace(
+            new RegExp(
+              "^(?:.*[&\\?]" +
+                encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") +
+                "(?:\\=([^&]*))?)?.*$",
+              "i"
+            ),
+            "$1"
+          )
+        );
+      }
+      function init() {
+        console.log("onload");
+        const id = getQueryStringValue("id");
+        showService(id);
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <!--loader-->
+    <div id="preloader">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
       </div>
     </div>
-    <div class="primary-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <nav class="navigation">
-              <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="about.html">About us</a> </li>
-                <li> <a href="services.html">services</a></li>
-                <li> <a href="gallery.html">Gallery</a></li>
-                
-                <li> <a href="contact.html">contact us</a> </li>
-              </ul>
-              </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- END HEADER --> 
-  <!-- CONTENT --> 
-  <!-- Intro Section -->
-  <section class="inner-intro bg-img light-color overlay-before parallax-background">
-    <div class="container">
-      <div class="row title">
-        <h1 data-title="services"><span>Services</span></h1>
-      </div>
-    </div>
-  </section>
-  <!-- Intro Section --> 
-  <!-- Service Section -->
-  <div id="services-section" class="pt-80 pt-xs-60">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-5 col-sx-12">
-          <div class="single-sidebar-widget">
-            <div class="special-links">
-              <ul>
-                <li> <a href="services.html">all services</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(1)" id="service1Link">Logging</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(2)" id="service2Link">Timber Purchasing</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(3)" id="service3Link">Timber supplies</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(4)" id="service4Link">Harvesting</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(5)" id="service5Link">Truck & Rail Shipping</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(6)" id="service6Link">Manufacturing</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(7)" id="service7Link">Shipping</a> </li>
-                <li> <a class="serviceLinks" onclick="showService(8)" id="service8Link">Methods of Shipment</a> </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Each service -->
-        <div class="col-md-8 col-sm-7" id="service1">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/logging.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Logging</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>When it comes to wood logging Howrowood offers a variety of products and services to customers. The products offered by the company include choking and safety hooks, wire rope, chain saws, hydraulics, shackles, swivels, mechanical splice grommets, cross boxes, and cab guards. It also offers rail boxes, strobe light brackets, lumber stops, rear cargo racks, fenders, recessed chain trays, deck covers, aluminum frame steps, tire chain hangers, light bars, and cork boots. besides, the company supplies overload sign brackets, cab entry boxes, safety flags, earplugs, helmet guards, safety glasses, hoses, climbing pads, locking snaps, permanent climbers and twisted shanks.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service2">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/timberPurchasing.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Timber Purchasing</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>The timber buying process involves a timber owner, a timber buyer, a logger, and a mill (manufacturer). The raw materials that supply the manufacturer are obtained through a network of buyers who purchase timber from private forest landowners. Buyers can work directly for a mill, for wood suppliers, loggers or timber brokers. Buyers may be paid a salary or a commission, or they may receive part of the profits. Timber brokers buy and resell timber, making their income from profits.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service3">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/timberSupplies.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Timber Supplies</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>Howrowood Supply is your number one stop for all of your building supplies. We’ve been providing friendly service and low prices for all of your home and building needs. We are very experienced within our community and we welcome the opportunity to help you with all your home building or remodeling needs. Our friendly and knowledgeable staff is here to help.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service4">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/harvesting.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Harvesting</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>Wood harvesting is the preparation of logs in a forest or tree plantation according to the requirements of a user and delivery of logs to a consumer. It includes the cutting of trees, their conversion into logs, extraction and long-distance transport to a consumer or processing plant. The terms forest harvesting, wood harvesting or logging are often used synonymously. Long-distance transport and the harvesting of non-wood forest products.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service5">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/truckRailShipping.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Truck & Rail Shipping</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>We are a reliable, long-standing partner for our customers in the wood processing. To ensure high quality services and to meet the individual needs of our customers, our experienced staff is specialized in the international transportation of wood & paper products, raw materials for associated production processes, as well as technological and woodworking equipment for constructing new plants or upgrading existing ones. Shipments are arranged using road, rail, sea and air transport, as well as multimodal logistics solutions. When transporting heavy or bulky goods, our professional employees design bespoke logistics schemes with customized rolling stock, specialized handling equipment, and full documentation support provided.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service6">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/manufacturing.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Manufacturing</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>We are specialized in precision screw machine & turned products and components for a wide variety of industries and applications. We offer short to medium production runs of simple to complex, small diameter products in both metal and plastic. All products are manufactured in our plant which allows us to maintain high quality, control costs, and meet delivery requirements.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service7">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/shipping.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Shipping</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>Howrowood can handle all of the necessary logistics from the manufacturer to the country of final destination. We handle all of the inland transportation, cargo handling & inspections at the port of export, ocean transportation, and documentation that is necessary for delivering our products, In most cases, one truckload of material will not maximize the full capacity of export equipment, such as 40' containers or flat racks. Our operations are positioned close to the port of export to ensure the equipment space and capacity is maximized to reduce the cost per unit of measure when shipping over the ocean. In addition to our port operations, our large shipping volumes ensure that our clients receive the most competitive FOB or CIF pricing for the products we distribute.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-7" id="service8">
-          <div class="full-pic">
-            <figure> <img src="assets/images/services/methodsOfShipment.jpg" alt=""> </figure>
-          </div>
-          <div class="text-box mt-xs-30 mt-40">
-            <div class="box-title mb-20">
-              <h2>Methods of Shipping</h2>
-            </div>
-            <div class="text-content mb-20">
-              <p>Howrowood has warehouses strategically located near ports of export throughout the US East Coast and Gulf Coast. We work hard to reduce costs & increase efficiencies in all aspects of handling our client's export orders. We analyze the costs associated with the entire supply chain from the point of cargo origination through the port of the final destination. We keep many of the items our markets demand in stock ready to ship at a moment's notice, allowing Putnam Lumber the opportunity to deliver cargos to the port with tight cargo deadline cuts. In addition to our warehousing facilities, we also offer a competitive direct shipment method, which can help reduce transportation and handling costs, resulting in lower FOB pricing for our clients. Our interest is in getting the right quality products for our clients at the best possible FOB price.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Service Section end --> 
-  <!-- FOOTER -->
-  <footer class="footer pt-80 pt-xs-60">
-    <div class="container"> 
-      <!--Footer Info -->
-      <div class="row footer-info mb-60">
-        <div class="col-md-3 col-sm-4 col-xs-12 mb-sm-30">
-          <h4 class="mb-30">CONTACT Us</h4>
-          <address>
-          <i class="ion-ios-location fa-icons"></i>  1080 W 3300 S, Salt Lake City, UT 84115
-          </address>
-          <ul class="link-small">
-            <li> <a href="mailto:info@howrowood.com"><i class="ion-ios-email fa-icons"></i>info@howrowood.com</a> </li>
-            <li> <a><i class="ion-ios-telephone fa-icons"></i>+1-844-469-7696</a> </li>
-          </ul>
-          <div class="icons-hover-black"> <a href="javascript:avoid(0);"> <i class="fa fa-facebook"></i> </a><a href="javascript:avoid(0);"> <i class="fa fa-twitter hidden"></i> </a><a href="javascript:avoid(0);"> <i class="fa fa-youtube hidden"></i> </a><a href="javascript:avoid(0);"> <i class="fa fa-dribbble hidden"></i> </a><a href="javascript:avoid(0);"> <i class="fa fa-linkedin hidden"></i> </a> </div>
-        </div>
-        <div class="col-md-2 col-sm-3 col-xs-12 mb-sm-30">
-          <h4 class="mb-30">Links</h4>
-          <ul class="link blog-link">
-            <li> <a href="javascript:avoid(0);"><i class="fa fa-angle-double-right"></i> About Us</a> </li>
-            <li> <a href="javascript:avoid(0);"><i class="fa fa-angle-double-right"></i> Services</a> </li>
-            <li> <a href="javascript:avoid(0);"><i class="fa fa-angle-double-right"></i> Privacy policy</a> </li>
-            <li> <a href="javascript:avoid(0);"><i class="fa fa-angle-double-right"></i> Terms &amp; condition</a> </li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-5 col-xs-12 mb-sm-30">
-          <h4 class="mb-30">Latest Blog</h4>
-          <div class="widget-details link">
-            <div class="post-type-post media">
-              <div class="entry-thumbnail media-left"> <img src="assets/images/blog/small-img.jpg" alt="Image"> </div>
-              <!-- /.entry-thumbnail -->
-              <div class="post-content media-body">
-                <p class="entry-title"> <a href="javascript:avoid(0);">Ut enim ad minim veniam, quis nostrud exercitation</a> </p>
-                <div class="post-meta"> On
-                  <time datetime="2017-02-10"> 10 Feb, 2017 </time>
-                </div>
-                <!-- /.post-meta --> 
+    <!--loader-->
+    <!-- Site Wraper -->
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header id="header" class="header header-2">
+        <div class="container secondary-header">
+          <div class="row">
+            <div class="col-sm-3 col-md-4">
+              <div class="logo">
+                <a href="index.html"
+                  ><img src="assets/images/logo.png" alt="Mega business"
+                /></a>
               </div>
-              <!-- /.post-content --> 
+              <button id="menu" class="menu visible-xs"></button>
             </div>
-            <div class="post-type-post media">
-              <div class="entry-thumbnail media-left"> <img src="assets/images/blog/small-img1.jpg" alt="Image"> </div>
-              <!-- /.entry-thumbnail -->
-              <div class="post-content media-body">
-                <p class="entry-title"> <a href="javascript:avoid(0);">Ut enim ad minim veniam, quis nostrud exercitation</a> </p>
-                <div class="post-meta"> On
-                  <time datetime="2017-02-10"> 10 Feb, 2017 </time>
-                </div>
-                <!-- /.post-meta --> 
+            <div class="col-sm-9 col-md-8 hidden-xs">
+              <div class="call-us">
+                <ul>
+                  <li class="top-space">
+                    <div class="icon-fa"><i class="fa fa-clock-o"></i></div>
+                    <div class="position">
+                      <div class="time_block">Office Timing</div>
+                      <div class="date-block">MON - FRI 8 AM - 5 PM (MST)</div>
+                    </div>
+                  </li>
+                  <li class="phone-nomber">
+                    <div class="text-right">
+                      <i class="fa fa-phone"></i
+                      ><span class="call-box"> Phone</span>
+                    </div>
+                    <a href="tel:+1-800-400-2070">+1-800-400-2070</a>
+                  </li>
+                </ul>
               </div>
-              <!-- /.post-content --> 
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12 col-xs-12 mt-sm-30 mt-xs-30">
-          <div class="newsletter">
-            <h4 class="mb-30">NEWSLETTER SIGNUP</h4>
-            <p> Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops: </p>
-            <form>
-              <input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
-              <button class="newsletter-btn btn btn-xs btn-color" type="submit" value=""> <i class="fa fa-angle-right mr-0"></i> </button>
-            </form>
+        <div class="primary-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <nav class="navigation">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                    <li><a href="contact.html">contact us</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END HEADER -->
+      <!-- CONTENT -->
+      <!-- Intro Section -->
+      <section
+        class="inner-intro bg-img light-color overlay-before parallax-background"
+      >
+        <div class="container">
+          <div class="row title">
+            <h1 data-title="services"><span>Services</span></h1>
+          </div>
+        </div>
+      </section>
+      <!-- Intro Section -->
+      <!-- Service Section -->
+      <div id="services-section" class="pt-80 pt-xs-60">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-5 col-sx-12">
+              <div class="single-sidebar-widget">
+                <div class="special-links">
+                  <ul>
+                    <li><a href="services.html">all services</a></li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(1)"
+                        id="service1Link"
+                        >Logging</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(2)"
+                        id="service2Link"
+                        >Timber Purchasing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(3)"
+                        id="service3Link"
+                        >Timber supplies</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(4)"
+                        id="service4Link"
+                        >Harvesting</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(5)"
+                        id="service5Link"
+                        >Truck & Rail Shipping</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(6)"
+                        id="service6Link"
+                        >Manufacturing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(7)"
+                        id="service7Link"
+                        >Shipping</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="serviceLinks"
+                        onclick="showService(8)"
+                        id="service8Link"
+                        >Methods of Shipment</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Each service -->
+            <div class="col-md-8 col-sm-7" id="service1">
+              <div class="full-pic">
+                <figure>
+                  <img src="assets/images/services/logging.jpg" alt="" />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Logging</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    When it comes to wood logging Howrowood offers a variety of
+                    products and services to customers. The products offered by
+                    the company include choking and safety hooks, wire rope,
+                    chain saws, hydraulics, shackles, swivels, mechanical splice
+                    grommets, cross boxes, and cab guards. It also offers rail
+                    boxes, strobe light brackets, lumber stops, rear cargo
+                    racks, fenders, recessed chain trays, deck covers, aluminum
+                    frame steps, tire chain hangers, light bars, and cork boots.
+                    besides, the company supplies overload sign brackets, cab
+                    entry boxes, safety flags, earplugs, helmet guards, safety
+                    glasses, hoses, climbing pads, locking snaps, permanent
+                    climbers and twisted shanks.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service2">
+              <div class="full-pic">
+                <figure>
+                  <img
+                    src="assets/images/services/timberPurchasing.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Timber Purchasing</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    The timber buying process involves a timber owner, a timber
+                    buyer, a logger, and a mill (manufacturer). The raw
+                    materials that supply the manufacturer are obtained through
+                    a network of buyers who purchase timber from private forest
+                    landowners. Buyers can work directly for a mill, for wood
+                    suppliers, loggers or timber brokers. Buyers may be paid a
+                    salary or a commission, or they may receive part of the
+                    profits. Timber brokers buy and resell timber, making their
+                    income from profits.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service3">
+              <div class="full-pic">
+                <figure>
+                  <img src="assets/images/services/timberSupplies.jpg" alt="" />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Timber Supplies</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    Howrowood Supply is your number one stop for all of your
+                    building supplies. We’ve been providing friendly service and
+                    low prices for all of your home and building needs. We are
+                    very experienced within our community and we welcome the
+                    opportunity to help you with all your home building or
+                    remodeling needs. Our friendly and knowledgeable staff is
+                    here to help.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service4">
+              <div class="full-pic">
+                <figure>
+                  <img src="assets/images/services/harvesting.jpg" alt="" />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Harvesting</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    Wood harvesting is the preparation of logs in a forest or
+                    tree plantation according to the requirements of a user and
+                    delivery of logs to a consumer. It includes the cutting of
+                    trees, their conversion into logs, extraction and
+                    long-distance transport to a consumer or processing plant.
+                    The terms forest harvesting, wood harvesting or logging are
+                    often used synonymously. Long-distance transport and the
+                    harvesting of non-wood forest products.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service5">
+              <div class="full-pic">
+                <figure>
+                  <img
+                    src="assets/images/services/truckRailShipping.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Truck & Rail Shipping</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    We are a reliable, long-standing partner for our customers
+                    in the wood processing. To ensure high quality services and
+                    to meet the individual needs of our customers, our
+                    experienced staff is specialized in the international
+                    transportation of wood & paper products, raw materials for
+                    associated production processes, as well as technological
+                    and woodworking equipment for constructing new plants or
+                    upgrading existing ones. Shipments are arranged using road,
+                    rail, sea and air transport, as well as multimodal logistics
+                    solutions. When transporting heavy or bulky goods, our
+                    professional employees design bespoke logistics schemes with
+                    customized rolling stock, specialized handling equipment,
+                    and full documentation support provided.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service6">
+              <div class="full-pic">
+                <figure>
+                  <img src="assets/images/services/manufacturing.jpg" alt="" />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Manufacturing</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    We are specialized in precision screw machine & turned
+                    products and components for a wide variety of industries and
+                    applications. We offer short to medium production runs of
+                    simple to complex, small diameter products in both metal and
+                    plastic. All products are manufactured in our plant which
+                    allows us to maintain high quality, control costs, and meet
+                    delivery requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service7">
+              <div class="full-pic">
+                <figure>
+                  <img src="assets/images/services/shipping.jpg" alt="" />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Shipping</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    Howrowood can handle all of the necessary logistics from the
+                    manufacturer to the country of final destination. We handle
+                    all of the inland transportation, cargo handling &
+                    inspections at the port of export, ocean transportation, and
+                    documentation that is necessary for delivering our products,
+                    In most cases, one truckload of material will not maximize
+                    the full capacity of export equipment, such as 40'
+                    containers or flat racks. Our operations are positioned
+                    close to the port of export to ensure the equipment space
+                    and capacity is maximized to reduce the cost per unit of
+                    measure when shipping over the ocean. In addition to our
+                    port operations, our large shipping volumes ensure that our
+                    clients receive the most competitive FOB or CIF pricing for
+                    the products we distribute.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7" id="service8">
+              <div class="full-pic">
+                <figure>
+                  <img
+                    src="assets/images/services/methodsOfShipment.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <div class="text-box mt-xs-30 mt-40">
+                <div class="box-title mb-20">
+                  <h2>Methods of Shipping</h2>
+                </div>
+                <div class="text-content mb-20">
+                  <p>
+                    Howrowood has warehouses strategically located near ports of
+                    export throughout the US East Coast and Gulf Coast. We work
+                    hard to reduce costs & increase efficiencies in all aspects
+                    of handling our client's export orders. We analyze the costs
+                    associated with the entire supply chain from the point of
+                    cargo origination through the port of the final
+                    destination. We keep many of the items our markets demand in
+                    stock ready to ship at a moment's notice, allowing Putnam
+                    Lumber the opportunity to deliver cargos to the port with
+                    tight cargo deadline cuts. In addition to our warehousing
+                    facilities, we also offer a competitive direct shipment
+                    method, which can help reduce transportation and handling
+                    costs, resulting in lower FOB pricing for our clients. Our
+                    interest is in getting the right quality products for our
+                    clients at the best possible FOB price.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- End Footer Info --> 
+      <!-- Service Section end -->
+      <!-- FOOTER -->
+      <footer class="footer pt-80 pt-xs-60">
+        <div class="container">
+          <!--Footer Info -->
+          <div class="row footer-info mb-60">
+            <div class="col-md-3 col-sm-4 col-xs-12 mb-sm-30">
+              <h4 class="mb-30">CONTACT Us</h4>
+              <address>
+                <i class="ion-ios-location fa-icons"></i> 1080 W 3300 S, Salt
+                Lake City, UT 84115
+              </address>
+              <ul class="link-small">
+                <li>
+                  <a href="mailto:info@howrowoods.com"
+                    ><i class="ion-ios-email fa-icons"></i
+                    >info@howrowoods.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    ><i class="ion-ios-telephone fa-icons"></i
+                    >+1-800-400-2070</a
+                  >
+                </li>
+              </ul>
+              <div class="icons-hover-black">
+                <a href="javascript:avoid(0);">
+                  <i class="fa fa-facebook"></i> </a
+                ><a href="javascript:avoid(0);">
+                  <i class="fa fa-twitter hidden"></i> </a
+                ><a href="javascript:avoid(0);">
+                  <i class="fa fa-youtube hidden"></i> </a
+                ><a href="javascript:avoid(0);">
+                  <i class="fa fa-dribbble hidden"></i> </a
+                ><a href="javascript:avoid(0);">
+                  <i class="fa fa-linkedin hidden"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 mb-sm-30">
+              <h4 class="mb-30">Links</h4>
+              <ul class="link blog-link">
+                <li>
+                  <a href="javascript:avoid(0);"
+                    ><i class="fa fa-angle-double-right"></i> About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:avoid(0);"
+                    ><i class="fa fa-angle-double-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:avoid(0);"
+                    ><i class="fa fa-angle-double-right"></i> Privacy policy</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:avoid(0);"
+                    ><i class="fa fa-angle-double-right"></i> Terms &amp;
+                    condition</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-12 mb-sm-30">
+              <h4 class="mb-30">Latest Blog</h4>
+              <div class="widget-details link">
+                <div class="post-type-post media">
+                  <div class="entry-thumbnail media-left">
+                    <img src="assets/images/blog/small-img.jpg" alt="Image" />
+                  </div>
+                  <!-- /.entry-thumbnail -->
+                  <div class="post-content media-body">
+                    <p class="entry-title">
+                      <a href="javascript:avoid(0);"
+                        >Ut enim ad minim veniam, quis nostrud exercitation</a
+                      >
+                    </p>
+                    <div class="post-meta">
+                      On
+                      <time datetime="2017-02-10"> 10 Feb, 2017 </time>
+                    </div>
+                    <!-- /.post-meta -->
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+                <div class="post-type-post media">
+                  <div class="entry-thumbnail media-left">
+                    <img src="assets/images/blog/small-img1.jpg" alt="Image" />
+                  </div>
+                  <!-- /.entry-thumbnail -->
+                  <div class="post-content media-body">
+                    <p class="entry-title">
+                      <a href="javascript:avoid(0);"
+                        >Ut enim ad minim veniam, quis nostrud exercitation</a
+                      >
+                    </p>
+                    <div class="post-meta">
+                      On
+                      <time datetime="2017-02-10"> 10 Feb, 2017 </time>
+                    </div>
+                    <!-- /.post-meta -->
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 mt-sm-30 mt-xs-30">
+              <div class="newsletter">
+                <h4 class="mb-30">NEWSLETTER SIGNUP</h4>
+                <p>
+                  Subscribe to Our Newsletter to get Important News, Amazing
+                  Offers & Inside Scoops:
+                </p>
+                <form>
+                  <input
+                    type="email"
+                    class="newsletter-input input-md newsletter-input mb-0"
+                    placeholder="Enter Your Email"
+                  />
+                  <button
+                    class="newsletter-btn btn btn-xs btn-color"
+                    type="submit"
+                    value=""
+                  >
+                    <i class="fa fa-angle-right mr-0"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- End Footer Info -->
+        </div>
+        <!-- Copyright Bar -->
+        <div class="copyright">
+          <div class="container">
+            <p>
+              © 2017 <a><b> Html5 Template</b></a
+              >. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <!-- End Copyright Bar -->
+      </footer>
+      <!-- END FOOTER -->
     </div>
-    <!-- Copyright Bar -->
-    <div class="copyright">
-      <div class="container">
-        <p> © 2017 <a><b> Html5 Template</b></a>. All Rights Reserved. </p>
-      </div>
-    </div>
-    <!-- End Copyright Bar --> 
-  </footer>
-  <!-- END FOOTER --> 
-</div>
-<!-- Site Wraper End --> 
-<script src="assets/js/jquery-1.12.4.min.js" type="text/javascript"></script> 
-<!-- Easing Effect Js --> 
-<script src="assets/js/plugin/jquery.easing.js" type="text/javascript"></script> 
-<!-- bootstrap Js --> 
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script> 
-<!-- carousel Js --> 
-<script src="assets/js/plugin/owl.carousel.js" type="text/javascript"></script> 
-<!-- Map api Js --> 
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&.js"></script> 
-<!-- custom Js --> 
-<script src="assets/js/custom.js" type="text/javascript"></script>
-</body>
+    <!-- Site Wraper End -->
+    <script
+      src="assets/js/jquery-1.12.4.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Easing Effect Js -->
+    <script
+      src="assets/js/plugin/jquery.easing.js"
+      type="text/javascript"
+    ></script>
+    <!-- bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- carousel Js -->
+    <script
+      src="assets/js/plugin/owl.carousel.js"
+      type="text/javascript"
+    ></script>
+    <!-- Map api Js -->
+    <script
+      type="text/javascript"
+      src="https://maps.google.com/maps/api/js?sensor=false&.js"
+    ></script>
+    <!-- custom Js -->
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+  </body>
 </html>
