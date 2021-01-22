@@ -18,7 +18,7 @@ function sendMail() {
 		"from_name": "Horowood contact form: "
 	};
 	 
-	var service_id = "default_service";
+	var service_id = "service_woquw0d";
 	var template_id = "template_yEfWBTFX";
 	
 	emailjs.send(service_id,template_id,template_params)
