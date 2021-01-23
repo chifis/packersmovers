@@ -19,7 +19,7 @@ function sendMail() {
 	};
 	 
 	var service_id = "service_lf98z1s";
-	var template_id = "__ejs-test-mail-service__";
+	var template_id = "template_ckipo08";
 	
 	emailjs.send(service_id,template_id,template_params)
 		.then(function() {
