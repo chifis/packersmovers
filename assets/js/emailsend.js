@@ -13,7 +13,7 @@ function sendMail() {
 	const template_params = {
 		"reply_to": email,
 		"to_name": name,
-		"message_html": message,
+		"message": message,
 		"form_subject": subject,
 		"from_name": "Horowood contact form: "
 	};
