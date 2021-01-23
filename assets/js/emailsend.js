@@ -1,5 +1,5 @@
 (function(){
-	emailjs.init("user_tsVsEORERoQYYoKbWD04a");
+	emailjs.init("user_xkqHuhYGCddOfU3CBzrH6");
 })();
 
 function sendMail() {
@@ -18,8 +18,8 @@ function sendMail() {
 		"from_name": "Horowood contact form: "
 	};
 	 
-	var service_id = "service_y4r1iic";
-	var template_id = "template_yEfWBTFX";
+	var service_id = "service_lf98z1s";
+	var template_id = "__ejs-test-mail-service__";
 	
 	emailjs.send(service_id,template_id,template_params)
 		.then(function() {
